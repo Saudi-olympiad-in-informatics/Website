@@ -1,5 +1,6 @@
 ---
 title: 'الجدول'
+id: schedule
 lang: ar
 ---
 

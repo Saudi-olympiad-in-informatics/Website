@@ -27,9 +27,10 @@ layout: base
             <ul class="navbar-nav ms-auto">
                 {% if page.lang == "ar" %}
                 <li class="nav-item"><a class="nav-link {% if page.id == 'registration' %} active {% endif %}" href="/registration">التسجيل</a></li>
+                <li class="nav-item"><a class="nav-link {% if page.id == 'schedule' %} active {% endif %}" href="/schedule">الجدول الزمني</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل</a></li>
                 {% else %}
-                <li class="nav-item"><a class="nav-link {% if page.id == 'registration' %} active {% endif %}" href="/registration">التسجيل</a></li>
+                <li class="nav-item"><a class="nav-link {% if page.id == 'registration' %} active {% endif %}" href="/registration">Registration</a></li>
                 <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/en/contact">Contact</a></li>
                 {% endif %}
 
