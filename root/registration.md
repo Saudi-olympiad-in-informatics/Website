@@ -1,5 +1,5 @@
 ---
-id: regisration
+id: registration
 lang: ar
 ---
 
