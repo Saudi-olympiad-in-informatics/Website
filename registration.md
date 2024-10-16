@@ -1,4 +1,5 @@
 ---
+id: registration
 lang: ar
 ---
 

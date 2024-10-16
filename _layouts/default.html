@@ -1,50 +1,98 @@
 ---
-lang: ar
 layout: base
 ---
+
 <nav class="navbar navbar-expand-md navbar-dark bg-success shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="/{% if page.lang == 'en' %}en{% endif %}">
             <b>
-                {% if page.lang == "ar" %}
-                الأولمبياد السعودي للمعلوماتية
-                {% else %}
-                Saudi Olympiad in Informatics
-                {% endif %}
+                {% if page.lang == "ar" %} الأولمبياد السعودي للمعلوماتية {%
+                else %} Saudi Olympiad in Informatics {% endif %}
             </b>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="{{ __('Toggle navigation') }}"
+        >
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav me-auto">
-                
-            </ul>
+            <ul class="navbar-nav me-auto"></ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 {% if page.lang == "ar" %}
-                <li class="nav-item"><a class="nav-link {% if page.id == 'registration' %} active {% endif %}" href="/registration">التسجيل</a></li>
-                <li class="nav-item"><a class="nav-link {% if page.id == 'schedule' %} active {% endif %}" href="/schedule">الجدول الزمني</a></li>
-                <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/contact">تواصل</a></li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link {% if page.id == 'registration' %} active {% endif %}"
+                        href="/registration"
+                        >التسجيل</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link {% if page.id == 'schedule' %} active {% endif %}"
+                        href="/schedule"
+                        >الجدول الزمني</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link {% if page.id == 'contact' %} active {% endif %}"
+                        href="/contact"
+                        >تواصل</a
+                    >
+                </li>
                 {% else %}
-                <li class="nav-item"><a class="nav-link {% if page.id == 'registration' %} active {% endif %}" href="/registration">Registration</a></li>
-                <li class="nav-item"><a class="nav-link {% if page.id == 'contact' %} active {% endif %}" href="/en/contact">Contact</a></li>
-                {% endif %}
+                <li class="nav-item">
+                    <a
+                        class="nav-link {% if page.id == 'registration' %} active {% endif %}"
+                        href="/en/registration"
+                        >Registration</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link {% if page.id == 'schedule' %} active {% endif %}"
+                        href="/en/schedule"
+                        >Schedule</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link {% if page.id == 'contact' %} active {% endif %}"
+                        href="/en/contact"
+                        >Contact</a
+                    >
+                </li>
+                {% endif %
 
                 <li class="nav-item">
                     {% if page.lang == "ar" %}
-                    <a class="nav-link" href="/en{{ page.url | remove_first: site.baseurl }}" class="btn btn-outline-success">EN</a>
+                    <a
+                        class="nav-link"
+                        href="/en{{ page.url | remove_first: site.baseurl }}"
+                        class="btn btn-outline-success"
+                        >EN</a
+                    >
                     {% else %}
-                    <a class="nav-link" href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }}" class="btn btn-outline-success">عربي</a>
+                    <a
+                        class="nav-link"
+                        href="{{ page.url | remove_first: site.baseurl | remove_first: '/en' }}"
+                        class="btn btn-outline-success"
+                        >عربي</a
+                    >
                     {% endif %}
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container p-1">
-    {{ content }}
-</div>
+<div class="container p-1">{{ content }}</div>
