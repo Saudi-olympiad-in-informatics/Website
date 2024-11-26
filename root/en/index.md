@@ -3,4 +3,4 @@ id: home
 lang: en
 ---
 
-hi
+Empty page
